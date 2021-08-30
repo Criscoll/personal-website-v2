@@ -1,0 +1,39 @@
+@import './utils/colours.scss';
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: $background-colour;
+}
+
+#root {
+    display: flex;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.content-space {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Mx437 IBM Model3x Alt4';
+    src: url('../assets/fonts/Mx437_IBM_Model3x_Alt4.ttf'); /* IE9 Compat Modes */
+}

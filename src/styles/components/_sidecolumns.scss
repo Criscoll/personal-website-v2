@@ -1,0 +1,35 @@
+.side-column-left-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 100px;
+    height: 250px;
+}
+
+.side-column-right-container {
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100px;
+    height: 250px;
+}
+
+.resume {
+    color: $primary-colour-green;
+    font-family: 'Mx437 IBM Model3x Alt4';
+    font-size: 24px;
+    line-height: 24px;
+    border: 1px dotted $primary-colour-green;
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 180px;
+}

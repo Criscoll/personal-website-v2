@@ -1,0 +1,27 @@
+@import '../utils/colours.scss';
+
+.landing-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+    // border: 1px solid white;
+}
+
+.typewriter-wrapper-landing-page {
+    font-size: 60px;
+    font-family: 'VT323', monospace;
+    color: white;
+}
+
+.typewriter-cursor-landing-page {
+    font-size: 60px;
+    font-family: 'VT323', monospace;
+    color: white;
+}
+
+.text-orange {
+    color: $secondary-colour-orange;
+}

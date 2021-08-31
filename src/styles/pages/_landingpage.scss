@@ -2,24 +2,43 @@
 
 .landing-page-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     height: 100vh;
     width: 100%;
-    // border: 1px solid white;
-}
 
-.typewriter-wrapper-landing-page {
-    font-size: 60px;
-    font-family: 'VT323', monospace;
-    color: white;
-}
+    .typewriter-content {
+        .typewriter-wrapper-landing-page {
+            font-size: 40px;
+            font-family: 'VT323', monospace;
+            color: white;
+        }
 
-.typewriter-cursor-landing-page {
-    font-size: 60px;
-    font-family: 'VT323', monospace;
-    color: white;
+        .typewriter-cursor-landing-page {
+            font-size: 40px;
+            font-family: 'VT323', monospace;
+            color: white;
+        }
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+
+        margin: 100px 0 0 0;
+        width: 50%;
+
+        * {
+            border: none;
+            background: none;
+            font-size: 30px;
+            letter-spacing: 5px;
+            font-family: 'Mx437 IBM Model3x Alt4', monospace;
+            color: $primary-colour-green;
+        }
+    }
 }
 
 .text-orange {

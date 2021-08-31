@@ -43,8 +43,23 @@ code {
   top: 0;
   left: 0;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 186px;
-  height: 250px;
+  height: 100vh;
+}
+
+.side-column-left-container .logo {
+  width: 80px;
+  margin: 10px 0 0 0;
 }
 
 .side-column-right-container {
@@ -144,6 +159,10 @@ code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -154,16 +173,36 @@ code {
   width: 100%;
 }
 
-.typewriter-wrapper-landing-page {
-  font-size: 60px;
+.landing-page-container .typewriter-content .typewriter-wrapper-landing-page {
+  font-size: 40px;
   font-family: 'VT323', monospace;
   color: white;
 }
 
-.typewriter-cursor-landing-page {
-  font-size: 60px;
+.landing-page-container .typewriter-content .typewriter-cursor-landing-page {
+  font-size: 40px;
   font-family: 'VT323', monospace;
   color: white;
+}
+
+.landing-page-container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 100px 0 0 0;
+  width: 50%;
+}
+
+.landing-page-container .navbar * {
+  border: none;
+  background: none;
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-family: 'Mx437 IBM Model3x Alt4', monospace;
+  color: #62e17e;
 }
 
 .text-orange {

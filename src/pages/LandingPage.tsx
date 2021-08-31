@@ -31,6 +31,13 @@ export default function LandingPage() {
                         }}
                     />
                 </div>
+
+                <div className="navbar">
+                    <button>Home</button>
+                    <button>About</button>
+                    <button>Experience</button>
+                    <button>Projects</button>
+                </div>
             </div>
         </>
     );

@@ -4,7 +4,7 @@
     left: 0;
     bottom: 0;
 
-    width: 100px;
+    width: 186px;
     height: 250px;
 }
 
@@ -14,22 +14,60 @@
     right: 0;
     bottom: 0;
 
-    width: 100px;
-    height: 250px;
-}
-
-.resume {
-    color: $primary-colour-green;
-    font-family: 'Mx437 IBM Model3x Alt4';
-    font-size: 24px;
-    line-height: 24px;
-    border: 1px dotted $primary-colour-green;
-}
-
-.contact-icons {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    height: 180px;
+    justify-content: space-between;
+
+    width: 186px;
+    height: 100vh;
+
+    .resume {
+        color: $primary-colour-green;
+        font-family: 'Mx437 IBM Model3x Alt4';
+        font-size: 24px;
+        line-height: 24px;
+        border: 2px solid $primary-colour-green;
+        text-align: center;
+        padding: 10px;
+        margin: 30px 37px 0;
+        width: 111px;
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 350px;
+
+        .Typewriter {
+            transform: rotate(90deg);
+        }
+
+        .typewriter-wrapper-column,
+        .typewriter-cursor-column {
+            font-family: 'VT323', monospace;
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .contact-icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 180px;
+            margin: 0 0 30px 0;
+
+            * {
+                width: 35px;
+                user-select: none;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }

@@ -1,7 +1,11 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 
-export default function LandingPage() {
+interface IProps {
+    introComplete?: boolean;
+}
+
+export default function LandingPage({ introComplete }: IProps) {
     const terminalLine: string = `> <span class="text-orange">criscoll: </span>`;
     const line1: string = 'Hi';
     const line2: string = ', my name is Cristian Bernal.';
@@ -25,7 +29,7 @@ export default function LandingPage() {
                                 .start();
                         }}
                         options={{
-                            delay: 70,
+                            delay: 40,
                             wrapperClassName: 'typewriter-wrapper-landing-page',
                             cursorClassName: 'typewriter-cursor-landing-page',
                         }}
@@ -33,10 +37,14 @@ export default function LandingPage() {
                 </div>
 
                 <div className="navbar">
-                    <button>Home</button>
-                    <button>About</button>
-                    <button>Experience</button>
-                    <button>Projects</button>
+                    {introComplete ? (
+                        <>
+                            <button>Home</button>
+                            <button>About</button>
+                            <button>Experience</button>
+                            <button>Projects</button>
+                        </>
+                    ) : null}
                 </div>
             </div>
         </>

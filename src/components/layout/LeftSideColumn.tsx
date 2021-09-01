@@ -1,10 +1,16 @@
 import Logo from '../../assets/images/Logo.png';
 
-export default function LeftSideColumn() {
+interface IProps {
+    introComplete?: boolean;
+}
+
+export default function LeftSideColumn({ introComplete }: IProps) {
     return (
         <>
             <div className="side-column-left-container">
-                <img src={Logo} alt="logo" className="logo" />
+                {introComplete ? (
+                    <img src={Logo} alt="logo" className="logo" />
+                ) : null}
             </div>
         </>
     );

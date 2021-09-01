@@ -1,4 +1,5 @@
 @import '../utils/colours.scss';
+@import '../utils/keyframes.scss';
 
 .side-column-left-container {
     position: sticky;
@@ -16,6 +17,7 @@
     .logo {
         width: 80px;
         margin: 10px 0 0 0;
+        animation: slide-in-right ease-out 800ms;
     }
 }
 
@@ -41,8 +43,9 @@
         border: 2px solid $primary-colour-green;
         text-align: center;
         padding: 10px;
-        margin: 30px 37px 0;
+        margin: 30px 0 0 0;
         width: 111px;
+        animation: slide-in-left ease-out 800ms;
     }
 
     .contact-details {
@@ -55,6 +58,7 @@
 
         .Typewriter {
             transform: rotate(90deg);
+            animation: fade-in ease-out 700ms;
         }
 
         .typewriter-wrapper-column,
@@ -75,8 +79,12 @@
             * {
                 width: 35px;
                 user-select: none;
+                animation: slide-in-left ease-out 600ms;
+                transition: all 100ms ease-in;
+
                 &:hover {
                     cursor: pointer;
+                    transform: scale(1.3);
                 }
             }
         }

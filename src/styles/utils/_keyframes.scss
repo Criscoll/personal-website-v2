@@ -27,3 +27,12 @@
         transform: translateX(0);
     }
 }
+
+@keyframes blink {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+    }
+}

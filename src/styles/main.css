@@ -78,6 +78,40 @@
   }
 }
 
+@-webkit-keyframes pop-up {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 html {
   height: 100%;
 }
@@ -160,6 +194,23 @@ code {
   }
 }
 
+@keyframes pop-up {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .side-column-left-container {
   position: -webkit-sticky;
   position: sticky;
@@ -181,7 +232,7 @@ code {
 }
 
 .side-column-left-container .logo {
-  width: 80px;
+  width: 70px;
   margin: 10px 0 0 0;
   -webkit-animation: slide-in-right ease-out 800ms;
           animation: slide-in-right ease-out 800ms;
@@ -222,6 +273,15 @@ code {
   width: 111px;
   -webkit-animation: slide-in-left ease-out 800ms;
           animation: slide-in-left ease-out 800ms;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.side-column-right-container .resume:hover {
+  cursor: pointer;
+  background-color: #44a058;
+  border-color: #44a058;
+  color: #fff;
 }
 
 .side-column-right-container .contact-details {
@@ -244,8 +304,6 @@ code {
 .side-column-right-container .contact-details .Typewriter {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-animation: fade-in ease-out 700ms;
-          animation: fade-in ease-out 700ms;
 }
 
 .side-column-right-container .contact-details .typewriter-wrapper-column,
@@ -253,6 +311,9 @@ code {
   font-family: 'VT323', monospace;
   font-size: 40px;
   color: #fff;
+  opacity: 0;
+  -webkit-animation: fade-in ease-out 400ms forwards;
+          animation: fade-in ease-out 400ms forwards;
 }
 
 .side-column-right-container .contact-details .contact-icons {
@@ -330,6 +391,23 @@ code {
   }
 }
 
+@keyframes pop-up {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .landing-page-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,8 +465,57 @@ code {
   letter-spacing: 5px;
   font-family: 'Mx437 IBM Model3x Alt4', monospace;
   color: #62e17e;
-  -webkit-animation: fade-in ease-in-out 3000ms;
-          animation: fade-in ease-in-out 3000ms;
+  opacity: 0;
+  -webkit-animation: pop-up ease-in-out 200ms forwards;
+          animation: pop-up ease-in-out 200ms forwards;
+  overflow: hidden;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.landing-page-container .navbar *::before {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 110px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  visibility: hidden;
+  background-color: #44a058;
+  z-index: -1;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.landing-page-container .navbar *:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.landing-page-container .navbar *:hover::before {
+  visibility: visible;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.landing-page-container .navbar :nth-child(1) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.landing-page-container .navbar :nth-child(2) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.landing-page-container .navbar :nth-child(3) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.landing-page-container .navbar :nth-child(4) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 
 .text-orange {

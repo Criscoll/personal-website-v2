@@ -23,9 +23,8 @@ export default function LandingPage({
                     <Typewriter
                         onInit={(typewriter) => {
                             typewriter
-                                .pauseFor(1000)
-                                .typeString('>')
-                                .pauseFor(1000)
+                                .pasteString('>', null)
+                                .pauseFor(2000)
                                 .typeString(` ${terminalLine}`)
                                 .pauseFor(1000)
                                 .typeString(line1)

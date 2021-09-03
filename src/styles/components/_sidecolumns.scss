@@ -15,7 +15,7 @@
     height: 100vh;
 
     .logo {
-        width: 80px;
+        width: 70px;
         margin: 10px 0 0 0;
         animation: slide-in-right ease-out 800ms;
     }
@@ -46,6 +46,14 @@
         margin: 30px 0 0 0;
         width: 111px;
         animation: slide-in-left ease-out 800ms;
+        transition: all ease-in-out 300ms;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $primary-colour-green-1;
+            border-color: $primary-colour-green-1;
+            color: $tertiary-colour-white;
+        }
     }
 
     .contact-details {
@@ -58,7 +66,6 @@
 
         .Typewriter {
             transform: rotate(90deg);
-            animation: fade-in ease-out 700ms;
         }
 
         .typewriter-wrapper-column,
@@ -66,6 +73,8 @@
             font-family: 'VT323', monospace;
             font-size: 40px;
             color: #fff;
+            opacity: 0;
+            animation: fade-in ease-out 400ms forwards;
         }
 
         .contact-icons {

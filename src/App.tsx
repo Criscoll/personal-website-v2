@@ -1,8 +1,11 @@
 import { useState } from 'react';
 
-import LandingPage from './pages/LandingPage';
 import LeftSideColumn from './components/layout/LeftSideColumn';
 import RightSideColumn from './components/layout/RightSideColumn';
+import LandingPage from './pages/LandingPage';
+import AboutPage from './pages/AboutPage';
+import ExperiencePage from './pages/ExperiencePage';
+import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
     const [introComplete, setIntroComplete] = useState(false);
@@ -20,20 +23,15 @@ function App() {
                 />
                 {introComplete ? (
                     <>
-                        <LandingPage
-                            setIntroComplete={() => {
-                                setIntroComplete(true);
-                            }}
-                        />
-                        <LandingPage
-                            setIntroComplete={() => {
-                                setIntroComplete(true);
-                            }}
-                        />
+                        <AboutPage />
+                        <ExperiencePage />
+                        <ProjectsPage />
                     </>
                 ) : null}
             </div>
-            <RightSideColumn introComplete={introComplete} />
+            <div className="test">
+                <RightSideColumn introComplete={introComplete} />
+            </div>
         </>
     );
 }

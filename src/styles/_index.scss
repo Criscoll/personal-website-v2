@@ -7,7 +7,9 @@ html {
 
 body {
     height: 100%;
-    background: $background-colour;
+    // background: $background-colour;
+    background: linear-gradient(to bottom, #33343a 1px, transparent 200px);
+    background-size: 20px 8px;
 }
 
 #root {

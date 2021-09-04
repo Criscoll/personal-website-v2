@@ -1,6 +1,11 @@
 @import './utils/colours.scss';
 @import './utils/keyframes.scss';
 
+@font-face {
+    font-family: 'Mx437 IBM Model3x Alt4';
+    src: url(../assets/fonts/Web437_IBM_Model3x_Alt4.woff) format('truetype');
+}
+
 html {
     height: 100%;
 }
@@ -11,10 +16,31 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
 
-    background: linear-gradient(#33343a 1px, transparent 100px);
-    background-size: 100% 7px;
+    background: linear-gradient(#33343a 1px, #fff 100px);
+    background-size: 100% 3px;
 
-    // scroll effect
+    //  horizontal line effect
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+
+        pointer-events: none;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        background: linear-gradient(
+            $background-colour 0% 25%,
+            transparent 25% 100%
+        );
+        background-size: 100% 3px;
+
+        z-index: 2;
+    }
+
+    // scan line effect
     &::after {
         content: '';
         position: absolute;
@@ -26,7 +52,7 @@ body {
             rgb(37, 114, 37) 50%,
             rgba(0, 221, 0, 0) 100%
         );
-        height: 50px;
+        height: 60px;
         opacity: 0.05;
         left: 0;
         right: 0;
@@ -35,22 +61,17 @@ body {
     }
 }
 
-#root {
-    display: flex;
-}
-
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
+}
+
+#root {
+    display: flex;
 }
 
 .content-space {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-@font-face {
-    font-family: 'Mx437 IBM Model3x Alt4';
-    src: url(../assets/fonts/Web437_IBM_Model3x_Alt4.woff) format('truetype');
 }

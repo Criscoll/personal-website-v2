@@ -9,6 +9,7 @@ function App() {
 
     return (
         <>
+            <div className="overlay" />
             <LeftSideColumn introComplete={introComplete} />
             <div className="content-space">
                 <LandingPage

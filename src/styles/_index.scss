@@ -18,6 +18,30 @@ body {
 
     background: linear-gradient(#33343a 1px, #fff 100px);
     background-size: 100% 3px;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+#root {
+    display: flex;
+    position: relative;
+}
+
+.content-space {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    pointer-events: none;
 
     //  horizontal line effect
     &::before {
@@ -43,7 +67,7 @@ body {
     // scan line effect
     &::after {
         content: '';
-        position: absolute;
+        position: fixed;
         display: block;
         animation: scan 10s 5s infinite cubic-bezier(0.17, -0.01, 0.6, 0.98);
         background: linear-gradient(
@@ -59,19 +83,4 @@ body {
         top: -10%;
         z-index: 3;
     }
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
-}
-
-#root {
-    display: flex;
-}
-
-.content-space {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
 }

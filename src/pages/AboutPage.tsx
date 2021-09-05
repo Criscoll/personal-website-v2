@@ -1,7 +1,7 @@
 export default function AboutPage() {
     return (
         <>
-            <div className="about-page-container"></div>
+            <section className="about-page-container"></section>
         </>
     );
 }

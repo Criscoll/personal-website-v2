@@ -135,12 +135,8 @@
   src: url(../assets/fonts/Web437_IBM_Model3x_Alt4.woff) format("truetype");
 }
 
-html {
-  height: 100%;
-}
-
 body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -200,11 +196,6 @@ code {
   right: 0;
   top: -10%;
   z-index: 3;
-}
-
-.test {
-  border: 3px solid yellow;
-  height: 100%;
 }
 
 @keyframes fade-in {
@@ -662,19 +653,19 @@ code {
 }
 
 .about-page-container {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   border: 3px solid red;
 }
 
 .experience-page-container {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   border: 3px solid green;
 }
 
 .projects-page-container {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   border: 3px solid purple;
 }

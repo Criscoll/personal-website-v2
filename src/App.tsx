@@ -29,9 +29,7 @@ function App() {
                     </>
                 ) : null}
             </div>
-            <div className="test">
-                <RightSideColumn introComplete={introComplete} />
-            </div>
+            <RightSideColumn introComplete={introComplete} />
         </>
     );
 }

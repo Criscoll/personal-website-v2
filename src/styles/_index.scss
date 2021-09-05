@@ -6,12 +6,12 @@
     src: url(../assets/fonts/Web437_IBM_Model3x_Alt4.woff) format('truetype');
 }
 
-html {
-    height: 100%;
-}
+// html {
+//     // height: 100%;
+// }
 
 body {
-    height: 100%;
+    min-height: 100vh;
     margin: 0;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -82,10 +82,4 @@ code {
         top: -10%;
         z-index: 3;
     }
-}
-
-.test {
-    border: 3px solid yellow;
-
-    height: 100%;
 }

@@ -18,7 +18,7 @@ export default function LandingPage({
 
     return (
         <>
-            <div className="landing-page-container">
+            <section className="landing-page-container">
                 <div className="typewriter-content">
                     <Typewriter
                         onInit={(typewriter) => {
@@ -56,7 +56,7 @@ export default function LandingPage({
                         </>
                     ) : null}
                 </div>
-            </div>
+            </section>
         </>
     );
 }

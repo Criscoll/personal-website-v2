@@ -1,10 +1,6 @@
 @import './colours.scss';
 @import './keyframes';
 
-.flicker {
-    animation: flicker 3s infinite;
-}
-
 .text-orange {
     color: $secondary-colour-orange;
 }

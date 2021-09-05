@@ -1,5 +1,6 @@
 @import '../utils/colours.scss';
 @import '../utils/keyframes.scss';
+@import '../utils/variables.scss';
 
 .landing-page-container {
     display: flex;
@@ -13,19 +14,26 @@
     .typewriter-content {
         margin: 100px 0 0 0;
 
-        .typewriter-wrapper-landing-page {
-            font-size: 40px;
-            font-family: 'VT323', monospace;
-            color: white;
-            letter-spacing: 3px;
-        }
+        .Typewriter {
+            .typewriter-wrapper-landing-page,
+            .typewriter-cursor-landing-page {
+                font-size: 40px;
+                font-family: 'VT323', monospace;
+                color: white;
+                letter-spacing: 3px;
 
-        .typewriter-cursor-landing-page {
-            font-size: 40px;
-            font-family: 'VT323', monospace;
-            color: white;
-            letter-spacing: 3px;
-            animation: blink 900ms steps(2, start) infinite;
+                @media only screen and (max-width: $small-screen) {
+                    font-size: 6vw;
+                }
+                @media only screen and (max-width: $xsmall-screen) {
+                    font-size: 7vw;
+                    letter-spacing: 0px;
+                }
+            }
+
+            .typewriter-cursor-landing-page {
+                animation: blink 900ms steps(2, start) infinite;
+            }
         }
     }
 
@@ -35,7 +43,13 @@
 
         margin: 100px 0 0 0;
         width: 50%;
-        height: 32px;
+        min-height: 32px;
+
+        @media only screen and (max-width: $medium-screen) {
+            flex-direction: column;
+            min-height: 250px;
+            width: 100%;
+        }
 
         * {
             border: none;

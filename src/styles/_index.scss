@@ -30,6 +30,19 @@ code {
     position: relative;
 }
 
+h1,
+h2,
+h3 {
+    color: $tertiary-colour-white;
+    font-weight: normal;
+    font-family: 'VT323', monospace;
+}
+
+p {
+    color: $tertiary-colour-white;
+    font-family: 'Mx437 IBM Model3x Alt4', monospace;
+}
+
 .content-space {
     position: relative;
     width: 100%;

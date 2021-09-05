@@ -1,5 +1,6 @@
 @import '../utils/colours.scss';
 @import '../utils/keyframes.scss';
+@import '../utils/variables.scss';
 
 .side-column-left-container {
     position: sticky;
@@ -15,6 +16,10 @@
     height: 100vh;
 
     z-index: 2;
+
+    @media only screen and (max-width: $small-screen) {
+        display: none;
+    }
 }
 
 .side-column-right-container {
@@ -32,6 +37,10 @@
     height: 100vh;
 
     z-index: 2;
+
+    @media only screen and (max-width: $small-screen) {
+        display: none;
+    }
 
     .resume {
         color: $primary-colour-green;

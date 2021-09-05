@@ -13,6 +13,8 @@
 
     width: 186px;
     height: 100vh;
+
+    z-index: 2;
 }
 
 .side-column-right-container {
@@ -28,6 +30,8 @@
 
     width: 186px;
     height: 100vh;
+
+    z-index: 2;
 
     .resume {
         color: $primary-colour-green;

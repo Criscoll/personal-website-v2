@@ -179,7 +179,7 @@ code {
   background: -webkit-gradient(linear, left top, left bottom, from(#33343a), color-stop(25%, transparent));
   background: linear-gradient(#33343a 0% 25%, transparent 25% 100%);
   background-size: 100% 3px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .overlay::after {
@@ -361,6 +361,7 @@ code {
           align-items: center;
   width: 186px;
   height: 100vh;
+  z-index: 2;
 }
 
 .side-column-right-container {
@@ -384,6 +385,7 @@ code {
           justify-content: space-between;
   width: 186px;
   height: 100vh;
+  z-index: 2;
 }
 
 .side-column-right-container .resume {

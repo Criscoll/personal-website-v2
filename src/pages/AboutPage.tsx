@@ -8,11 +8,13 @@ export default function AboutPage() {
             <section className="about-page-container">
                 <div className="inner-container">
                     <h1>{' > 01. About Me'}</h1>
-                    <div className="text-content">
-                        <p>{parse(aboutme)}</p>
-                    </div>
-                    <div className="image-content">
-                        <img src={ProfilePhoto} alt="profile photo" />
+                    <div className="content">
+                        <div className="text-content">
+                            <p>{parse(aboutme)}</p>
+                        </div>
+                        <div className="image-content">
+                            <img src={ProfilePhoto} alt="profile" />
+                        </div>
                     </div>
                 </div>
             </section>

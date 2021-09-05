@@ -7,12 +7,15 @@
     border: 3px solid red;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     .inner-container {
         display: flex;
+        flex-direction: column;
         // border: 3px solid yellow;
         width: 80%;
-        justify-content: space-between;
+        height: 90%;
+        justify-content: space-evenly;
 
         @media only screen and (max-width: $large-screen) {
             width: 90%;
@@ -23,55 +26,61 @@
             align-items: center;
         }
 
-        .text-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            // border: 3px solid green;
-            // flex-grow: 2;
-            // flex-basis: 70%;
-            width: 50%;
-
-            @media only screen and (max-width: $medium-screen) {
-                width: 100%;
-            }
-
-            h1 {
-                font-size: 60px;
-                color: $primary-colour-green;
-            }
-
-            p {
-                font-size: 36px;
-
-                @media only screen and (max-width: $large-screen) {
-                    font-size: 28px;
-                }
-
-                @media only screen and (max-width: $large-screen) {
-                    font-size: 24px;
-                }
-            }
+        h1 {
+            font-size: 60px;
+            color: $primary-colour-green;
+            // border: 3px solid cyan;
+            margin-right: auto;
         }
 
-        .image-content {
+        .content {
             display: flex;
-            justify-content: center;
-            align-items: center;
-
-            // border: 1px solid yellow;
-            // flex-grow: 1;
-            // flex-basis: 40%;
-            width: 30%;
+            justify-content: space-between;
+            // border: 3px solid blue;
 
             @media only screen and (max-width: $medium-screen) {
                 flex-direction: column;
-                width: 100%;
             }
 
-            img {
-                min-width: 50px;
-                max-width: 500px;
+            .text-content {
+                width: 50%;
+
+                @media only screen and (max-width: $medium-screen) {
+                    width: 100%;
+                }
+
+                p {
+                    font-size: 36px;
+
+                    @media only screen and (max-width: $large-screen) {
+                        font-size: 28px;
+                    }
+
+                    @media only screen and (max-width: $large-screen) {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .image-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // border: 1px solid yellow;
+                // flex-grow: 1;
+                // flex-basis: 40%;
+                width: 30%;
+
+                @media only screen and (max-width: $medium-screen) {
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                img {
+                    min-width: 50px;
+                    max-width: 700px;
+                }
             }
         }
     }

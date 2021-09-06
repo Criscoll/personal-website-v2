@@ -9,6 +9,10 @@
     color: $primary-colour-green;
 }
 
-.pop-in {
-    animation: pop-up ease-in-out 200ms forwards;
+.drop-in {
+    animation: slide-in-bottom 1000ms forwards;
+}
+
+.hide {
+    opacity: 0;
 }

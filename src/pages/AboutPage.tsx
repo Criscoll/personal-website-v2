@@ -1,34 +1,56 @@
 import { aboutme } from '../constants/text';
 import parse from 'html-react-parser';
 import ProfilePhoto from '../assets/images/profile-photo.jpg';
-import React, { forwardRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 
-interface AboutMeProps {}
+export default function AboutMe() {
+    const { ref: headerRef, inView: headerInView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+    const { ref: textRef, inView: textInView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+    const { ref: imageRef, inView: imageInView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true,
+    });
 
-const AboutMe = forwardRef<HTMLHeadingElement, AboutMeProps>(
-    (props, forwardedRef) => {
-        return (
-            <>
-                <section className="about-page-container">
-                    <div className="inner-container">
-                        <h1 ref={forwardedRef}>{' > 01. About Me'}</h1>
-                        <div className="content">
-                            <div className="text-content">
-                                <p>{parse(aboutme)}</p>
-                            </div>
-                            <div className="image-content">
-                                <img
-                                    src={ProfilePhoto}
-                                    alt="profile"
-                                    width="450px"
-                                />
-                            </div>
+    return (
+        <>
+            <section className="about-page-container">
+                <div className="inner-container">
+                    <h1
+                        className={` hide ${headerInView ? 'drop-in' : ''}`}
+                        ref={headerRef}
+                    >
+                        {' > 01. About Me'}
+                    </h1>
+                    <div className="content">
+                        <div
+                            className={`text-content hide ${
+                                textInView ? 'drop-in' : ''
+                            }`}
+                            ref={textRef}
+                        >
+                            <p>{parse(aboutme)}</p>
+                        </div>
+                        <div
+                            className={`image-content hide ${
+                                imageInView ? 'drop-in' : ''
+                            }`}
+                            ref={imageRef}
+                        >
+                            <img
+                                src={ProfilePhoto}
+                                alt="profile"
+                                width="450px"
+                            />
                         </div>
                     </div>
-                </section>
-            </>
-        );
-    }
-);
-
-export default AboutMe;
+                </div>
+            </section>
+        </>
+    );
+}

@@ -130,6 +130,32 @@
   }
 }
 
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @font-face {
   font-family: 'Mx437 IBM Model3x Alt4';
   src: url(../assets/fonts/Web437_IBM_Model3x_Alt4.woff) format("truetype");
@@ -277,6 +303,19 @@ p {
   }
 }
 
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .text-orange {
   color: #ffa14a;
 }
@@ -285,9 +324,13 @@ p {
   color: #62e17e;
 }
 
-.pop-in {
-  -webkit-animation: pop-up ease-in-out 200ms forwards;
-          animation: pop-up ease-in-out 200ms forwards;
+.drop-in {
+  -webkit-animation: slide-in-bottom 1000ms forwards;
+          animation: slide-in-bottom 1000ms forwards;
+}
+
+.hide {
+  opacity: 0;
 }
 
 @keyframes fade-in {
@@ -353,6 +396,19 @@ p {
   }
   to {
     top: 100%;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -569,6 +625,19 @@ p {
   }
 }
 
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .landing-page-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -628,7 +697,7 @@ p {
           justify-content: space-between;
   margin: 100px 0 0 0;
   width: 50%;
-  min-height: 32px;
+  height: 32px;
 }
 
 @media only screen and (max-width: 1450px) {

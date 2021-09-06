@@ -1,5 +1,6 @@
 @import './utils/colours.scss';
 @import './utils/keyframes.scss';
+@import './utils//variables.scss';
 
 @font-face {
     font-family: 'Mx437 IBM Model3x Alt4';
@@ -41,6 +42,14 @@ h3 {
 p {
     color: $tertiary-colour-white;
     font-family: 'Mx437 IBM Model3x Alt4', monospace;
+}
+
+section {
+    padding: 0 100px;
+
+    @media only screen and (max-width: $medium-screen) {
+        padding: 0 3%;
+    }
 }
 
 .content-space {

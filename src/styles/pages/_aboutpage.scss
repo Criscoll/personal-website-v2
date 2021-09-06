@@ -9,12 +9,14 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: $medium-screen) {
+        align-items: stretch;
+    }
+
     .inner-container {
         display: flex;
         flex-direction: column;
-        // border: 3px solid yellow;
         width: 80%;
-        height: 90%;
         justify-content: space-evenly;
 
         @media only screen and (max-width: $large-screen) {
@@ -23,23 +25,28 @@
 
         @media only screen and (max-width: $medium-screen) {
             flex-direction: column;
+            justify-content: center;
             align-items: center;
         }
 
         h1 {
             font-size: 60px;
             color: $primary-colour-green;
-            // border: 3px solid cyan;
             margin-right: auto;
+
+            @media only screen and (max-width: $small-screen) {
+                font-size: 8vw;
+            }
         }
 
         .content {
             display: flex;
             justify-content: space-between;
-            // border: 3px solid blue;
 
             @media only screen and (max-width: $medium-screen) {
                 flex-direction: column;
+                justify-content: space-evenly;
+                height: 100%;
             }
 
             .text-content {
@@ -50,14 +57,14 @@
                 }
 
                 p {
-                    font-size: 36px;
+                    font-size: 28px;
 
-                    @media only screen and (max-width: $large-screen) {
-                        font-size: 28px;
+                    @media only screen and (max-width: $medium-screen) {
+                        font-size: 24px;
                     }
 
-                    @media only screen and (max-width: $large-screen) {
-                        font-size: 24px;
+                    @media only screen and (max-width: $small-screen) {
+                        font-size: 22px;
                     }
                 }
             }
@@ -67,9 +74,6 @@
                 justify-content: center;
                 align-items: center;
 
-                // border: 1px solid yellow;
-                // flex-grow: 1;
-                // flex-basis: 40%;
                 width: 30%;
 
                 @media only screen and (max-width: $medium-screen) {
@@ -78,8 +82,13 @@
                 }
 
                 img {
-                    min-width: 50px;
-                    max-width: 700px;
+                    min-width: 250px;
+                    max-width: 100%;
+                    width: 100%;
+
+                    @media only screen and (max-width: $medium-screen) {
+                        width: 50%;
+                    }
                 }
             }
         }

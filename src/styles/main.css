@@ -285,6 +285,11 @@ p {
   color: #62e17e;
 }
 
+.pop-in {
+  -webkit-animation: pop-up ease-in-out 200ms forwards;
+          animation: pop-up ease-in-out 200ms forwards;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -712,6 +717,14 @@ p {
           align-items: center;
 }
 
+@media only screen and (max-width: 1450px) {
+  .about-page-container {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+
 .about-page-container .inner-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -721,7 +734,6 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
-  height: 90%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -739,6 +751,9 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -749,6 +764,12 @@ p {
   font-size: 60px;
   color: #62e17e;
   margin-right: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-page-container .inner-container h1 {
+    font-size: 8vw;
+  }
 }
 
 .about-page-container .inner-container .content {
@@ -766,6 +787,10 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 100%;
   }
 }
 
@@ -780,18 +805,18 @@ p {
 }
 
 .about-page-container .inner-container .content .text-content p {
-  font-size: 36px;
+  font-size: 28px;
 }
 
-@media only screen and (max-width: 2100px) {
+@media only screen and (max-width: 1450px) {
   .about-page-container .inner-container .content .text-content p {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 
-@media only screen and (max-width: 2100px) {
+@media only screen and (max-width: 1000px) {
   .about-page-container .inner-container .content .text-content p {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -819,8 +844,15 @@ p {
 }
 
 .about-page-container .inner-container .content .image-content img {
-  min-width: 50px;
-  max-width: 700px;
+  min-width: 250px;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1450px) {
+  .about-page-container .inner-container .content .image-content img {
+    width: 50%;
+  }
 }
 
 .experience-page-container {

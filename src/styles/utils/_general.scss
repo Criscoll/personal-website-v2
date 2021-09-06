@@ -8,3 +8,7 @@
 .text-green {
     color: $primary-colour-green;
 }
+
+.pop-in {
+    animation: pop-up ease-in-out 200ms forwards;
+}

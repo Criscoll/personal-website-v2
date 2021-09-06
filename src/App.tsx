@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import LeftSideColumn from './components/layout/LeftSideColumn';
 import RightSideColumn from './components/layout/RightSideColumn';
@@ -6,9 +6,17 @@ import LandingPage from './pages/LandingPage';
 import AboutPage from './pages/AboutPage';
 import ExperiencePage from './pages/ExperiencePage';
 import ProjectsPage from './pages/ProjectsPage';
+import { useInView } from 'react-intersection-observer';
 
 function App() {
     const [introComplete, setIntroComplete] = useState(false);
+    const { ref: aboutRef, inView } = useInView({
+        threshold: 0,
+    });
+
+    useEffect(() => {
+        console.log(inView);
+    }, [inView]);
 
     return (
         <>
@@ -23,7 +31,7 @@ function App() {
                 />
                 {introComplete ? (
                     <>
-                        <AboutPage />
+                        <AboutPage ref={aboutRef} />
                         <ExperiencePage />
                         <ProjectsPage />
                     </>

@@ -898,6 +898,24 @@ section {
   }
 }
 
+.about-page-container .inner-container .content .text-content .skills-list {
+  color: #fff;
+  font-family: 'Mx437 IBM Model3x Alt4', monospace;
+  font-size: 28px;
+}
+
+@media only screen and (max-width: 1450px) {
+  .about-page-container .inner-container .content .text-content .skills-list {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-page-container .inner-container .content .text-content .skills-list {
+    font-size: 22px;
+  }
+}
+
 .about-page-container .inner-container .content .image-content {
   display: -webkit-box;
   display: -ms-flexbox;

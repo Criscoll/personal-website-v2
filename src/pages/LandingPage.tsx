@@ -28,7 +28,7 @@ export default function LandingPage({
                                 .typeString(line1)
                                 .pauseFor(800)
                                 .typeString(line2)
-                                .pasteString(`<br /> ${terminalLine}`, null)
+                                .pasteString(`<br /> ${terminalLine} `, null)
                                 .pauseFor(1400)
                                 .typeString(line3)
                                 .callFunction(() => {

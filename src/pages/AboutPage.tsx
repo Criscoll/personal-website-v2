@@ -1,19 +1,19 @@
-import { aboutme } from '../constants/text';
+import { aboutIntro, aboutCurrent, aboutSkills } from '../constants/text';
 import parse from 'html-react-parser';
 import ProfilePhoto from '../assets/images/profile-photo.jpg';
 import { useInView } from 'react-intersection-observer';
 
 export default function AboutMe() {
     const { ref: headerRef, inView: headerInView } = useInView({
-        threshold: 0.1,
+        threshold: 0.5,
         triggerOnce: true,
     });
     const { ref: textRef, inView: textInView } = useInView({
-        threshold: 0.1,
+        threshold: 0.3,
         triggerOnce: true,
     });
     const { ref: imageRef, inView: imageInView } = useInView({
-        threshold: 0.1,
+        threshold: 0.3,
         triggerOnce: true,
     });
 
@@ -34,7 +34,11 @@ export default function AboutMe() {
                             }`}
                             ref={textRef}
                         >
-                            <p>{parse(aboutme)}</p>
+                            <p>{parse(aboutIntro)}</p>
+                            <p>{parse(aboutCurrent)}</p>
+                            <div className="skills-list">
+                                {parse(aboutSkills)}
+                            </div>
                         </div>
                         <div
                             className={`image-content hide ${

@@ -1,18 +1,36 @@
 @import './colours.scss';
 @import './keyframes';
 
+// display and visibility
+.hide {
+    opacity: 0;
+}
+
+// flex properties
+.initial-layout-row {
+    flex-direction: row;
+}
+
+.initial-layout-column {
+    flex-direction: column;
+    min-height: 500px;
+}
+
+//  text colours
 .text-orange {
     color: $secondary-colour-orange;
 }
-
 .text-green {
     color: $primary-colour-green;
 }
 
+// animations
 .drop-in {
     animation: slide-in-bottom 1000ms forwards;
 }
-
-.hide {
-    opacity: 0;
+.display-right {
+    animation: slide-in-left 500ms forwards;
+}
+.hide-right {
+    animation: slide-out-right 500ms forwards;
 }

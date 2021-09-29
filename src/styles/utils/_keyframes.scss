@@ -73,3 +73,14 @@
         opacity: 1;
     }
 }
+
+@keyframes slide-out-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+}

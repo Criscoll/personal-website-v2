@@ -1,20 +1,19 @@
-import React from 'react';
+import { forwardRef } from 'react';
 import Typewriter from 'typewriter-effect';
+import DesktopNavbar from '../components/navigation/DesktopNavbar';
 
-interface IProps {
-    introComplete?: boolean;
+interface LandingPageProps {
+    introComplete: boolean;
     setIntroComplete: () => void;
 }
 
-export default function LandingPage({
-    introComplete,
-    setIntroComplete,
-}: IProps) {
+
+const LandingPage = forwardRef<HTMLDivElement, LandingPageProps>(({ introComplete, setIntroComplete }, navbarRef) => {
     const terminalLine: string = '>';
     const line1: string = ' Hi';
     const line2: string =
-        ', my name is <span class="text-green">Cristian Bernal.</span> ';
-    const line3: string = ' Welcome to my website.';
+        ', my name is <span class="text-green">Cristian Bernal</span> ';
+    const line3: string = ' Welcome to my website';
 
     return (
         <>
@@ -46,17 +45,11 @@ export default function LandingPage({
                     />
                 </div>
 
-                <div className="navbar">
-                    {introComplete ? (
-                        <>
-                            <button>Home</button>
-                            <button>About</button>
-                            <button>Experience</button>
-                            <button>Projects</button>
-                        </>
-                    ) : null}
-                </div>
+                <DesktopNavbar ref={navbarRef} introComplete={introComplete} layout='row' />
+
             </section>
         </>
     );
-}
+});
+
+export default LandingPage;

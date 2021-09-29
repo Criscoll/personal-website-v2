@@ -1,11 +1,16 @@
-interface IProps {
-    introComplete?: boolean;
+import DesktopNavbar from '../navigation/DesktopNavbar';
+
+interface LeftSideColumnProps {
+    introComplete: boolean;
+    navbarInView: boolean;
 }
 
-export default function LeftSideColumn({ introComplete }: IProps) {
+export default function LeftSideColumn({ introComplete, navbarInView }: LeftSideColumnProps) {
     return (
         <>
-            <div className="side-column-left-container"></div>
+            <aside className="side-column-left-container">
+                {navbarInView ? null : <DesktopNavbar introComplete={introComplete} layout="column" />}
+            </aside>
         </>
     );
 }

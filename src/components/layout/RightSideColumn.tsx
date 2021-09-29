@@ -21,7 +21,7 @@ export default function RightSideColumn({ introComplete }: IProps) {
 
     return (
         <>
-            <div className="side-column-right-container">
+            <aside className="side-column-right-container">
                 {introComplete ? (
                     <>
                         <h1 className="resume">Resume</h1>
@@ -78,7 +78,7 @@ export default function RightSideColumn({ introComplete }: IProps) {
                         </div>
                     </>
                 ) : null}
-            </div>
+            </aside>
         </>
     );
 }

@@ -1,13 +1,14 @@
 import { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { introComplete as introCompleteAtom } from '../../states';
 
 interface MobileNavbarProps {
-    introComplete: boolean;
 }
 
-export default function MobileNavbar({ introComplete }: MobileNavbarProps) {
+export default function MobileNavbar({ }: MobileNavbarProps) {
     const [displayNavbar, setDisplayNavbar] = useState(false);
+    const [introComplete] = useRecoilState(introCompleteAtom);
 
-    console.log(displayNavbar);
 
     return (
         <>
@@ -21,9 +22,8 @@ export default function MobileNavbar({ introComplete }: MobileNavbarProps) {
                             <i className="fas fa-bars"></i>
                         </span>
                         <aside
-                            className={`mobile-navbar ${
-                                displayNavbar ? 'display-right' : 'hide-right'
-                            }`}
+                            className={`mobile-navbar ${displayNavbar ? 'display-right' : 'hide-right'
+                                }`}
                         >
                             <span
                                 className="close-btn"

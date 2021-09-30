@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import LeftSideColumn from './components/layout/LeftSideColumn';
 import RightSideColumn from './components/layout/RightSideColumn';
 import LandingPage from './pages/LandingPage';
@@ -7,24 +6,20 @@ import ExperiencePage from './pages/ExperiencePage';
 import ProjectsPage from './pages/ProjectsPage';
 import MobileNavbar from './components/navigation/MobileNavbar';
 import { useInView } from 'react-intersection-observer';
+import { useRecoilState } from 'recoil';
+import { introComplete as introCompleteAtom } from './states';
 
 function App() {
-    const [introComplete, setIntroComplete] = useState(false);
+    const [introComplete] = useRecoilState(introCompleteAtom);
     const { ref: navbarRef, inView: navbarInView } = useInView();
 
 
     return (
         <>
             <div className="overlay" />
-            <LeftSideColumn introComplete={introComplete} navbarInView={navbarInView} />
+            <LeftSideColumn navbarInView={navbarInView} />
             <main className="content-space">
-                <LandingPage
-                    ref={navbarRef}
-                    introComplete={introComplete}
-                    setIntroComplete={() => {
-                        setIntroComplete(true);
-                    }}
-                />
+                <LandingPage ref={navbarRef} />
                 {introComplete ? (
                     <>
                         <AboutPage />
@@ -33,8 +28,8 @@ function App() {
                     </>
                 ) : null}
             </main>
-            <MobileNavbar introComplete={introComplete} />
-            <RightSideColumn introComplete={introComplete} />
+            <MobileNavbar />
+            <RightSideColumn />
         </>
     );
 }

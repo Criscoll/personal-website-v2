@@ -1,19 +1,21 @@
 import { forwardRef } from 'react';
 import Typewriter from 'typewriter-effect';
+import { useRecoilState } from 'recoil';
+import { introComplete as introCompleteAtom } from '../states';
 import DesktopNavbar from '../components/navigation/DesktopNavbar';
 
 interface LandingPageProps {
-    introComplete: boolean;
-    setIntroComplete: () => void;
 }
 
 
-const LandingPage = forwardRef<HTMLDivElement, LandingPageProps>(({ introComplete, setIntroComplete }, navbarRef) => {
+const LandingPage = forwardRef<HTMLDivElement, LandingPageProps>(({ }, navbarRef) => {
+    const [introComplete, setIntroComplete] = useRecoilState(introCompleteAtom);
     const terminalLine: string = '>';
     const line1: string = ' Hi';
     const line2: string =
         ', my name is <span class="text-green">Cristian Bernal</span> ';
     const line3: string = ' Welcome to my website';
+
 
     return (
         <>
@@ -32,7 +34,7 @@ const LandingPage = forwardRef<HTMLDivElement, LandingPageProps>(({ introComplet
                                 .typeString(line3)
                                 .callFunction(() => {
                                     setTimeout(() => {
-                                        setIntroComplete();
+                                        setIntroComplete(true);
                                     }, 500);
                                 })
                                 .start();

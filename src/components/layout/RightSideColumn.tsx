@@ -3,14 +3,16 @@ import emailIcon from '../../assets/images/email-icon-white.png';
 import linkedinIcon from '../../assets/images/linkedin-icon-white.png';
 import githubIcon from '../../assets/images/github-icon-white.png';
 import Typewriter from 'typewriter-effect';
+import { useRecoilState } from 'recoil';
+import { introComplete as introCompleteAtom } from '../../states';
 
 interface IProps {
-    introComplete?: boolean;
 }
 
-export default function RightSideColumn({ introComplete }: IProps) {
+export default function RightSideColumn({ }: IProps) {
     const [hoveredContact, setHoveredContact] = useState('');
     const [renderTypewriter, setRenderTyperwriter] = useState(false);
+    const [introComplete] = useRecoilState(introCompleteAtom);
 
     useEffect(() => {
         setRenderTyperwriter(false);

@@ -1,11 +1,15 @@
+import { useRecoilState } from 'recoil';
+import { introComplete as introCompleteAtom } from '../../states';
 import DesktopNavbar from '../navigation/DesktopNavbar';
 
 interface LeftSideColumnProps {
-    introComplete: boolean;
     navbarInView: boolean;
 }
 
-export default function LeftSideColumn({ introComplete, navbarInView }: LeftSideColumnProps) {
+export default function LeftSideColumn({ navbarInView }: LeftSideColumnProps) {
+
+    const [introComplete] = useRecoilState(introCompleteAtom);
+
     return (
         <>
             <aside className="side-column-left-container">

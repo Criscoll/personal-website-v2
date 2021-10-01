@@ -378,7 +378,6 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 500px;
 }
 
 .text-orange {
@@ -387,6 +386,26 @@ section {
 
 .text-green {
   color: #62e17e;
+}
+
+.text-size-xsmall {
+  font-size: 12px;
+}
+
+.text-size-small {
+  font-size: 18px;
+}
+
+.text-size-medium {
+  font-size: 24px;
+}
+
+.text-size-large {
+  font-size: 30px;
+}
+
+.text-size-xlarge {
+  font-size: 36px;
 }
 
 .drop-in {
@@ -511,9 +530,10 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 200px;
+  width: 220px;
   height: 100vh;
   z-index: 2;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -541,9 +561,10 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 200px;
+  width: 220px;
   height: 100vh;
   z-index: 2;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -650,7 +671,6 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 100px 0 0 0;
-  max-width: 900px;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -662,46 +682,6 @@ section {
     min-height: 250px;
     width: 100%;
   }
-}
-
-.navbar * {
-  border: none;
-  background: none;
-  font-size: 30px;
-  letter-spacing: 5px;
-  font-family: 'Mx437 IBM Model3x Alt4', monospace;
-  color: #62e17e;
-  opacity: 0;
-  -webkit-animation: pop-up ease-in-out 200ms forwards;
-          animation: pop-up ease-in-out 200ms forwards;
-  overflow: hidden;
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
-
-.navbar *::before {
-  content: '';
-  position: absolute;
-  width: 110%;
-  height: 110px;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  visibility: hidden;
-  background-color: #44a058;
-  z-index: -1;
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
-
-.navbar *:hover {
-  cursor: pointer;
-  color: #fff;
-}
-
-.navbar *:hover::before {
-  visibility: visible;
-  -webkit-transform: translateX(-10%);
-          transform: translateX(-10%);
 }
 
 .navbar :nth-child(1) {
@@ -797,6 +777,46 @@ section {
   .mobile-navbar-container .mobile-navbar .close-btn {
     font-size: 8vw;
   }
+}
+
+.nav-btn {
+  border: none;
+  background: none;
+  margin: 30px;
+  opacity: 0;
+  color: #62e17e;
+  letter-spacing: 5px;
+  font-family: 'Mx437 IBM Model3x Alt4', monospace;
+  -webkit-animation: pop-up ease-in-out 200ms forwards;
+          animation: pop-up ease-in-out 200ms forwards;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+  overflow: hidden;
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 110px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  visibility: hidden;
+  background-color: #44a058;
+  z-index: -1;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.nav-btn:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav-btn:hover::before {
+  visibility: visible;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
 }
 
 @keyframes fade-in {

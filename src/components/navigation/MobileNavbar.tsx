@@ -2,10 +2,8 @@ import { useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { introComplete as introCompleteAtom } from '../../states';
 
-interface MobileNavbarProps {
-}
 
-export default function MobileNavbar({ }: MobileNavbarProps) {
+export default function MobileNavbar() {
     const [displayNavbar, setDisplayNavbar] = useState(false);
     const [introComplete] = useRecoilState(introCompleteAtom);
 

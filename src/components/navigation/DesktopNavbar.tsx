@@ -1,22 +1,27 @@
 import { forwardRef } from 'react';
+import NavBtn from '../buttons/NavBtn';
 
 interface DesktopNavbarpProps {
     introComplete: boolean;
-    layout: 'row' | 'column'
+    layout: 'row' | 'column';
+    textSize: 'small' | 'medium' | 'large';
+    btnList?: string[];
 }
 
 
 
-const DesktopNavbar = forwardRef<HTMLDivElement, DesktopNavbarpProps>(({ introComplete, layout }, forwardedRef) => {
+const DesktopNavbar = forwardRef<HTMLDivElement, DesktopNavbarpProps>(({ introComplete, layout, textSize }, forwardedRef) => {
+
+    const btnList = ['Home', 'About', 'Experience', 'Projects'];
+
     return (
         <>
             <div ref={forwardedRef} className={`navbar ${layout === 'row' ? 'initial-layout-row' : 'initial-layout-column'}`}>
                 {introComplete ? (
                     <>
-                        <button>Home</button>
-                        <button>About</button>
-                        <button>Experience</button>
-                        <button>Projects</button>
+                        {btnList.map((name) => {
+                            return <NavBtn name={name} textSize={textSize} />
+                        })}
                     </>
                 ) : null}
             </div>

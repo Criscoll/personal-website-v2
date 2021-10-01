@@ -6,10 +6,8 @@ import Typewriter from 'typewriter-effect';
 import { useRecoilState } from 'recoil';
 import { introComplete as introCompleteAtom } from '../../states';
 
-interface IProps {
-}
 
-export default function RightSideColumn({ }: IProps) {
+export default function RightSideColumn() {
     const [hoveredContact, setHoveredContact] = useState('');
     const [renderTypewriter, setRenderTyperwriter] = useState(false);
     const [introComplete] = useRecoilState(introCompleteAtom);

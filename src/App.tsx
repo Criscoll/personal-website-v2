@@ -13,7 +13,6 @@ function App() {
     const [introComplete] = useRecoilState(introCompleteAtom);
     const { ref: navbarRef, inView: navbarInView } = useInView();
 
-
     return (
         <>
             <div className="overlay" />

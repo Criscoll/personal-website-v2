@@ -1,0 +1,36 @@
+.nav-btn {
+    border: none;
+    background: none;
+    margin: 30px;
+    opacity: 0;
+    color: $primary-colour-green;
+
+    letter-spacing: 5px;
+    font-family: 'Mx437 IBM Model3x Alt4', monospace;
+
+    animation: pop-up ease-in-out 200ms forwards;
+    transition: all ease-in-out 300ms;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 110%;
+        height: 110px;
+        transform: translateX(-100%);
+        visibility: hidden;
+        background-color: $primary-colour-green-1;
+        z-index: -1;
+        transition: all ease-in-out 300ms;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: $tertiary-colour-white;
+
+        &::before {
+            visibility: visible;
+            transform: translateX(-10%);
+        }
+    }
+}

@@ -13,15 +13,34 @@
 
 .initial-layout-column {
     flex-direction: column;
-    min-height: 500px;
 }
 
-//  text colours
+//  text colours and size
 .text-orange {
     color: $secondary-colour-orange;
 }
 .text-green {
     color: $primary-colour-green;
+}
+
+.text-size-xsmall {
+    font-size: 12px;
+}
+
+.text-size-small {
+    font-size: 18px;
+}
+
+.text-size-medium {
+    font-size: 24px;
+}
+
+.text-size-large {
+    font-size: 30px;
+}
+
+.text-size-xlarge {
+    font-size: 36px;
 }
 
 // animations

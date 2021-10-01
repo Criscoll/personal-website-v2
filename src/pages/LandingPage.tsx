@@ -4,11 +4,9 @@ import { useRecoilState } from 'recoil';
 import { introComplete as introCompleteAtom } from '../states';
 import DesktopNavbar from '../components/navigation/DesktopNavbar';
 
-interface LandingPageProps {
-}
 
 
-const LandingPage = forwardRef<HTMLDivElement, LandingPageProps>(({ }, navbarRef) => {
+const LandingPage = forwardRef<HTMLDivElement>((_, navbarRef) => {
     const [introComplete, setIntroComplete] = useRecoilState(introCompleteAtom);
     const terminalLine: string = '>';
     const line1: string = ' Hi';
@@ -47,7 +45,7 @@ const LandingPage = forwardRef<HTMLDivElement, LandingPageProps>(({ }, navbarRef
                     />
                 </div>
 
-                <DesktopNavbar ref={navbarRef} introComplete={introComplete} layout='row' />
+                <DesktopNavbar ref={navbarRef} introComplete={introComplete} layout='row' textSize='medium' />
 
             </section>
         </>

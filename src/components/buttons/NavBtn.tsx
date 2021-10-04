@@ -4,7 +4,6 @@ interface NavBtnProps {
     textSize: 'small' | 'medium' | 'large';
 }
 
-
 const NavBtn = ({ name, textSize }: NavBtnProps) => {
 
     return <>

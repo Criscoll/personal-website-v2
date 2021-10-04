@@ -218,10 +218,6 @@ p {
   font-family: 'Mx437 IBM Model3x Alt4', monospace;
 }
 
-section {
-  padding: 0 100px;
-}
-
 @media only screen and (max-width: 1450px) {
   section {
     padding: 0 3%;
@@ -530,6 +526,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 220px;
   height: 100vh;
   z-index: 2;
@@ -670,7 +669,6 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 100px 0 0 0;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -928,7 +926,7 @@ section {
 }
 
 .landing-page-container .typewriter-content {
-  margin: 100px 0 0 0;
+  margin: 40px 0;
 }
 
 .landing-page-container .typewriter-content .Typewriter .typewriter-wrapper-landing-page,
@@ -988,17 +986,10 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 80%;
   max-width: 2000px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-@media only screen and (max-width: 2100px) {
-  .about-page-container .inner-container {
-    width: 90%;
-  }
 }
 
 @media only screen and (max-width: 1450px) {
@@ -1032,9 +1023,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -1051,7 +1042,7 @@ section {
 }
 
 .about-page-container .inner-container .content .text-content {
-  width: 50%;
+  width: 60%;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -1098,13 +1089,14 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30%;
+  width: 40%;
+  padding: 30px 0 0 0;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -1119,8 +1111,7 @@ section {
 
 .about-page-container .inner-container .content .image-content img {
   min-width: 250px;
-  max-width: 100%;
-  width: 100%;
+  max-width: 80%;
 }
 
 @media only screen and (max-width: 1450px) {

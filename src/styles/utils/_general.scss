@@ -9,10 +9,17 @@
 // flex properties
 .initial-layout-row {
     flex-direction: row;
+    * {
+        margin: 0 30px;
+    }
 }
 
 .initial-layout-column {
     flex-direction: column;
+
+    * {
+        margin: 30px 0;
+    }
 }
 
 //  text colours and size

@@ -45,7 +45,7 @@ const LandingPage = forwardRef<HTMLDivElement>((_, navbarRef) => {
                     />
                 </div>
 
-                <DesktopNavbar ref={navbarRef} introComplete={introComplete} layout='row' textSize='medium' />
+                <DesktopNavbar ref={navbarRef} introComplete={introComplete} layout='row' textSize='large' />
 
             </section>
         </>

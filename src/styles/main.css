@@ -369,11 +369,19 @@ p {
           flex-direction: row;
 }
 
+.initial-layout-row * {
+  margin: 0 30px;
+}
+
 .initial-layout-column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.initial-layout-column * {
+  margin: 30px 0;
 }
 
 .text-orange {
@@ -780,10 +788,9 @@ p {
 .nav-btn {
   border: none;
   background: none;
-  margin: 30px;
   opacity: 0;
   color: #62e17e;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   font-family: 'Mx437 IBM Model3x Alt4', monospace;
   -webkit-animation: pop-up ease-in-out 200ms forwards;
           animation: pop-up ease-in-out 200ms forwards;
@@ -926,7 +933,7 @@ p {
 }
 
 .landing-page-container .typewriter-content {
-  margin: 40px 0;
+  margin: 60px 0;
 }
 
 .landing-page-container .typewriter-content .Typewriter .typewriter-wrapper-landing-page,
@@ -1121,6 +1128,7 @@ p {
 }
 
 .experience-page-container {
+  min-height: 100vh;
   border: 3px solid green;
 }
 

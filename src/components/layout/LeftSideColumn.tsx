@@ -13,7 +13,7 @@ export default function LeftSideColumn({ navbarInView }: LeftSideColumnProps) {
     return (
         <>
             <aside className="side-column-left-container">
-                {navbarInView ? null : <DesktopNavbar introComplete={introComplete} layout="column" textSize='small' />}
+                {navbarInView ? null : <DesktopNavbar introComplete={introComplete} layout="column" textSize='medium' />}
             </aside>
         </>
     );

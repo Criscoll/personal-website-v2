@@ -1,13 +1,11 @@
 .nav-btn {
     border: none;
     background: none;
-    opacity: 0;
     color: $primary-colour-green;
 
     letter-spacing: 3px;
     font-family: 'Mx437 IBM Model3x Alt4', monospace;
 
-    animation: pop-up ease-in-out 200ms forwards;
     transition: all ease-in-out 300ms;
     overflow: hidden;
 

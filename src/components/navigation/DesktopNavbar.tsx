@@ -5,12 +5,13 @@ interface DesktopNavbarpProps {
     introComplete: boolean;
     layout: 'row' | 'column';
     textSize: 'small' | 'medium' | 'large';
+    isStatic: boolean;
     btnList?: string[];
 }
 
 
 
-const DesktopNavbar = forwardRef<HTMLDivElement, DesktopNavbarpProps>(({ introComplete, layout, textSize }, forwardedRef) => {
+const DesktopNavbar = forwardRef<HTMLDivElement, DesktopNavbarpProps>(({ introComplete, layout, textSize, isStatic }, forwardedRef) => {
 
     const btnList = ['Home', 'About', 'Experience', 'Projects'];
 
@@ -20,7 +21,7 @@ const DesktopNavbar = forwardRef<HTMLDivElement, DesktopNavbarpProps>(({ introCo
                 {introComplete ? (
                     <>
                         {btnList.map((name) => {
-                            return <NavBtn name={name} textSize={textSize} />
+                            return <NavBtn name={name} textSize={textSize} isStatic={isStatic} />
                         })}
                     </>
                 ) : null}

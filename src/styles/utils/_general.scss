@@ -6,6 +6,14 @@
     opacity: 0;
 }
 
+.visible {
+    visibility: visible;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
 // flex properties
 .initial-layout-row {
     flex-direction: row;
@@ -51,12 +59,25 @@
 }
 
 // animations
+.pop-up {
+    opacity: 0;
+    animation: pop-up ease-in-out 200ms forwards;
+}
+
+.pop-up-hide {
+    opacity: 1;
+    pointer-events: none;
+    animation: pop-up-hide ease-in-out 200ms forwards;
+}
+
 .drop-in {
     animation: slide-in-bottom 1000ms forwards;
 }
+
 .display-right {
     animation: slide-in-left 500ms forwards;
 }
+
 .hide-right {
     animation: slide-out-right 500ms forwards;
 }

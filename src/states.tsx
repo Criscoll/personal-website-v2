@@ -8,3 +8,8 @@ export const introComplete = atom({
     key: "introComplete",
     default: false,
 });
+
+export const navbarInView = atom({
+    key: "navbarInView",
+    default: false,
+});

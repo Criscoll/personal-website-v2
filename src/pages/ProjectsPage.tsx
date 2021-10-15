@@ -20,7 +20,6 @@ export default function ProjectsPage() {
                 <ProjectCard {...projectCardProps} />
                 <ProjectCard {...projectCardProps} />
                 <ProjectCard {...projectCardProps} />
-
             </section>
         </>
     );

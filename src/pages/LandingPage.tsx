@@ -12,7 +12,7 @@ const LandingPage = forwardRef<HTMLDivElement>((_, navbarRef) => {
     const line1: string = ' Hi';
     const line2: string =
         ', my name is <span class="text-green">Cristian Bernal</span> ';
-    const line3: string = ' Welcome to my website';
+    const line3: string = ' Welcome to my website ';
 
 
     return (
@@ -41,6 +41,7 @@ const LandingPage = forwardRef<HTMLDivElement>((_, navbarRef) => {
                             delay: 40,
                             wrapperClassName: 'typewriter-wrapper-landing-page',
                             cursorClassName: 'typewriter-cursor-landing-page',
+                            cursor: '_'
                         }}
                     />
                 </div>

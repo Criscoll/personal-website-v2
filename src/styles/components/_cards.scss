@@ -1,0 +1,23 @@
+.project-card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 300px;
+
+    img {
+        object-fit: cover;
+    }
+
+    .project-description {
+        border: 1px solid purple;
+        width: 30%;
+        height: 100%;
+    }
+
+    .project-tech-stack {
+        border: 1px solid green;
+        width: 30%;
+        height: 100%;
+    }
+}

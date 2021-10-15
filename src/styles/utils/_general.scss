@@ -30,6 +30,10 @@
     }
 }
 
+.reverse-row {
+    flex-direction: row-reverse;
+}
+
 //  text colours and size
 .text-orange {
     color: $secondary-colour-orange;

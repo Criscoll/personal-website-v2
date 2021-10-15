@@ -31,3 +31,33 @@
         }
     }
 }
+
+.img-btn-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+
+    &:hover {
+        cursor: pointer;
+        .img-btn {
+            opacity: 0.3;
+        }
+
+        .img-btn-overlay {
+            opacity: 1;
+        }
+    }
+
+    .img-btn {
+        transition: all ease-in 200ms;
+    }
+
+    .img-btn-overlay {
+        position: absolute;
+        opacity: 0;
+        transition: all ease-in 200ms;
+    }
+}

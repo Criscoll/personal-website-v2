@@ -29,16 +29,6 @@
             align-items: center;
         }
 
-        h1 {
-            font-size: 60px;
-            color: $primary-colour-green;
-            margin-right: auto;
-
-            @media only screen and (max-width: $small-screen) {
-                font-size: 8vw;
-            }
-        }
-
         .content {
             display: flex;
             align-items: flex-start;

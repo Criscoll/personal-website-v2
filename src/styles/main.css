@@ -249,6 +249,17 @@ h3 {
   font-family: 'VT323', monospace;
 }
 
+h1 {
+  font-size: 60px;
+  color: #62e17e;
+}
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 8vw;
+  }
+}
+
 p {
   color: #fff;
   font-family: 'Mx437 IBM Model3x Alt4', monospace;
@@ -444,6 +455,13 @@ p {
 
 .initial-layout-column * {
   margin: 30px 0;
+}
+
+.reverse-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .text-orange {
@@ -914,6 +932,75 @@ p {
           transform: translateX(-10%);
 }
 
+.img-btn-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  height: 250px;
+}
+
+.img-btn-container:hover {
+  cursor: pointer;
+}
+
+.img-btn-container:hover .img-btn {
+  opacity: 0.3;
+}
+
+.img-btn-container:hover .img-btn-overlay {
+  opacity: 1;
+}
+
+.img-btn-container .img-btn {
+  -webkit-transition: all ease-in 200ms;
+  transition: all ease-in 200ms;
+}
+
+.img-btn-container .img-btn-overlay {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all ease-in 200ms;
+  transition: all ease-in 200ms;
+}
+
+.project-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 300px;
+}
+
+.project-card-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.project-card-container .project-description {
+  border: 1px solid purple;
+  width: 30%;
+  height: 100%;
+}
+
+.project-card-container .project-tech-stack {
+  border: 1px solid green;
+  width: 30%;
+  height: 100%;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -1122,18 +1209,6 @@ p {
   }
 }
 
-.about-page-container .inner-container h1 {
-  font-size: 60px;
-  color: #62e17e;
-  margin-right: auto;
-}
-
-@media only screen and (max-width: 1000px) {
-  .about-page-container .inner-container h1 {
-    font-size: 8vw;
-  }
-}
-
 .about-page-container .inner-container .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1236,11 +1311,6 @@ p {
 }
 
 .experience-page-container {
-  min-height: 100vh;
   border: 3px solid green;
-}
-
-.projects-page-container {
-  border: 3px solid purple;
 }
 /*# sourceMappingURL=main.css.map */

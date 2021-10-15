@@ -39,6 +39,16 @@ h3 {
     font-family: 'VT323', monospace;
 }
 
+h1 {
+    font-size: 60px;
+    color: $primary-colour-green;
+    // margin-right: auto;
+
+    @media only screen and (max-width: $small-screen) {
+        font-size: 8vw;
+    }
+}
+
 p {
     color: $tertiary-colour-white;
     font-family: 'Mx437 IBM Model3x Alt4', monospace;

@@ -267,7 +267,7 @@ p {
 
 @media only screen and (max-width: 1450px) {
   section {
-    padding: 0 3%;
+    padding: 0 10%;
   }
 }
 
@@ -969,6 +969,7 @@ p {
   opacity: 0;
   -webkit-transition: all ease-in 200ms;
   transition: all ease-in 200ms;
+  text-align: center;
 }
 
 .project-card-container {
@@ -984,6 +985,16 @@ p {
   height: 300px;
 }
 
+@media only screen and (max-width: 1450px) {
+  .project-card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 150px 0;
+  }
+}
+
 .project-card-container img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -995,10 +1006,24 @@ p {
   height: 100%;
 }
 
+@media only screen and (max-width: 1450px) {
+  .project-card-container .project-description {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
 .project-card-container .project-tech-stack {
   border: 1px solid green;
   width: 30%;
   height: 100%;
+}
+
+@media only screen and (max-width: 1450px) {
+  .project-card-container .project-tech-stack {
+    width: 80%;
+    margin: 10px 0;
+  }
 }
 
 @keyframes fade-in {
@@ -1160,7 +1185,6 @@ p {
 }
 
 .about-page-container {
-  border: 3px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1308,9 +1332,5 @@ p {
   .about-page-container .inner-container .content .image-content img {
     width: 50%;
   }
-}
-
-.experience-page-container {
-  border: 3px solid green;
 }
 /*# sourceMappingURL=main.css.map */

@@ -13,7 +13,7 @@ interface DesktopNavbarpProps {
 
 const DesktopNavbar = forwardRef<HTMLDivElement, DesktopNavbarpProps>(({ introComplete, layout, textSize, isStatic }, forwardedRef) => {
 
-    const btnList = ['Home', 'About', 'Experience', 'Projects'];
+    const btnList = ['Home', 'About', 'Projects'];
 
     return (
         <>

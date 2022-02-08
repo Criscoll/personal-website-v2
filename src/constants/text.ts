@@ -1,14 +1,9 @@
 
 
-export const aboutIntro: string = `Hi! my name is <span class="text-green">Cristian</span>, I like to build cool things using software.
-My interst in programming came about unintentionally in 2018 after taking a compulsory programming fundamentals course as apart of my degree. At the time I was in my first year 
-of uni studying to become an Electrical Engineer, after that course I made the pivot and graduated with a Computer Science Degree. `;
+export const aboutIntro: string = `Hey! my name is <span class="text-green">Cristian</span>, welcome to my website. I built this website mainly for fun and experience but also as a way to host my projects to help keep them all in one place. Its pretty barebones right now but te `;
 
 
-export const aboutCurrent: string = `Currently I'm working part time as a Software Developer for a mid-sized start up company working on e-commerce marketing technology.`;
-
-
-export const aboutSkills: string = `My current skills revolve around the following technologies: <br /> 
+export const aboutSkills: string = `What I have experience with: <br /> 
 <ul>
     <li>C++</li> 
     <li>Python</li> 

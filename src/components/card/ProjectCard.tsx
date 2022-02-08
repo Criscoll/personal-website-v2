@@ -18,8 +18,8 @@ const ProjectCard = ({ imgBtnProps, projectDescription, projectTechStack }: Proj
             <ImageBtn
                 {...imgBtnProps}
             />
-            <div className="project-description">{projectDescription}</div>
-            <div className="project-tech-stack">{projectTechStack}</div>
+            <div className="project-description"><p>{projectDescription}</p></div>
+            <div className="project-tech-stack"><p>{projectTechStack}</p></div>
 
         </div>
     </>

@@ -1,9 +1,16 @@
+@import '../utils/variables.scss';
+
 .project-card-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     height: 300px;
+
+    @media only screen and (max-width: $medium-screen) {
+        flex-direction: column;
+        margin: 150px 0;
+    }
 
     img {
         object-fit: cover;
@@ -13,11 +20,19 @@
         border: 1px solid purple;
         width: 30%;
         height: 100%;
+        @media only screen and (max-width: $medium-screen) {
+            width: 80%;
+            margin: 10px 0;
+        }
     }
 
     .project-tech-stack {
         border: 1px solid green;
         width: 30%;
         height: 100%;
+        @media only screen and (max-width: $medium-screen) {
+            width: 80%;
+            margin: 10px 0;
+        }
     }
 }

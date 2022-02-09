@@ -35,24 +35,29 @@
 .img-btn-container {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 250px;
+    width: 30%;
+    height: 100%;
 
-    &:hover {
-        cursor: pointer;
-        .img-btn {
-            opacity: 0.3;
-        }
-
-        .img-btn-overlay {
-            opacity: 1;
-        }
+    @media only screen and (max-width: $medium-screen) {
+        width: 80%;
+        margin: 10px 0;
     }
 
     .img-btn {
         transition: all ease-in 200ms;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.3;
+
+            .img-btn-overlay {
+                opacity: 1;
+                pointer-events: none;
+                user-select: none;
+            }
+        }
     }
 
     .img-btn-overlay {

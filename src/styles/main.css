@@ -937,31 +937,44 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 250px;
-  height: 250px;
+  width: 30%;
+  height: 100%;
 }
 
-.img-btn-container:hover {
-  cursor: pointer;
-}
-
-.img-btn-container:hover .img-btn {
-  opacity: 0.3;
-}
-
-.img-btn-container:hover .img-btn-overlay {
-  opacity: 1;
+@media only screen and (max-width: 1450px) {
+  .img-btn-container {
+    width: 80%;
+    margin: 10px 0;
+  }
 }
 
 .img-btn-container .img-btn {
   -webkit-transition: all ease-in 200ms;
   transition: all ease-in 200ms;
+}
+
+.img-btn-container .img-btn:hover {
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.img-btn-container .img-btn:hover .img-btn-overlay {
+  opacity: 1;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .img-btn-container .img-btn-overlay {
@@ -983,6 +996,24 @@ p {
       -ms-flex-align: center;
           align-items: center;
   height: 300px;
+  margin: 60px 0;
+}
+
+.project-card-container:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 1450px) {
+  .project-card-container:nth-child(odd) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 350px 0;
+  }
 }
 
 @media only screen and (max-width: 1450px) {
@@ -1001,7 +1032,7 @@ p {
 }
 
 .project-card-container .project-description {
-  border: 1px solid purple;
+  font-size: 18px;
   width: 30%;
   height: 100%;
 }
@@ -1009,12 +1040,15 @@ p {
 @media only screen and (max-width: 1450px) {
   .project-card-container .project-description {
     width: 80%;
-    margin: 10px 0;
+    padding: 10px 0;
   }
 }
 
 .project-card-container .project-tech-stack {
-  border: 1px solid green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
   width: 30%;
   height: 100%;
 }
@@ -1022,7 +1056,7 @@ p {
 @media only screen and (max-width: 1450px) {
   .project-card-container .project-tech-stack {
     width: 80%;
-    margin: 10px 0;
+    padding: 10px 0;
   }
 }
 

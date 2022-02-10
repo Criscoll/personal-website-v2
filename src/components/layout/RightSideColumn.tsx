@@ -56,7 +56,7 @@ export default function RightSideColumn() {
                                         }}
                                     />
                                 </a>
-                                <a href="https://www.linkedin.com/in/cristian" target="_blank" rel=" noopener noreferrer">
+                                <a href="https://www.linkedin.com/in/cristian-bernal/" target="_blank" rel=" noopener noreferrer">
                                     <img
                                         src={linkedinIcon}
                                         alt="linkedin"

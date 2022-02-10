@@ -11,7 +11,8 @@ import { useEffect } from 'react';
 
 function App() {
     const [introComplete] = useRecoilState(introCompleteAtom);
-    const [navbarInView, setNavbarInView] = useRecoilState(navbarInViewAtom) // recoil wrapper for react-intersection-observer 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [_, setNavbarInView] = useRecoilState(navbarInViewAtom) // recoil wrapper for react-intersection-observer 
     const { ref: navbarRef, inView } = useInView();
 
     // need to update the recoil atom for global access of navbarInView

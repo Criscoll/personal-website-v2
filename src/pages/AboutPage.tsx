@@ -1,4 +1,4 @@
-import { aboutIntro, aboutSkills } from '../constants/text';
+import { aboutIntro } from '../constants/text';
 import parse from 'html-react-parser';
 import ProfilePhoto from '../assets/images/profile-photo.jpg';
 import { useInView } from 'react-intersection-observer';
@@ -34,9 +34,6 @@ export default function AboutMe() {
                             ref={textRef}
                         >
                             <p>{parse(aboutIntro)}</p>
-                            {/* <div className="skills-list">
-                                {parse(aboutSkills)}
-                            </div> */}
                         </div>
                         <div
                             className={`image-content hide ${imageInView ? 'drop-in' : ''

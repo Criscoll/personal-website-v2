@@ -1342,6 +1342,15 @@ p {
   }
 }
 
+.about-page-container .inner-container .content .text-content .penguin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .about-page-container .inner-container .content .text-content .skills-list {
   color: #fff;
   font-family: 'Mx437 IBM Model3x Alt4', monospace;

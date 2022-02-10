@@ -58,6 +58,11 @@
                     }
                 }
 
+                .penguin {
+                    display: flex;
+                    justify-content: center;
+                }
+
                 .skills-list {
                     color: $tertiary-colour-white;
                     font-family: 'Mx437 IBM Model3x Alt4', monospace;

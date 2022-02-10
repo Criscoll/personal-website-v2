@@ -5,6 +5,7 @@ import photoproCover from "../assets/images/photopro-cover.png";
 
 export const aboutIntro: string = `Hey! my name is <span class="text-green">Cristian</span>, welcome to my website. I built this website mainly for fun and experience but also as a way to host my projects to help keep them all in one place. Still a work in progress :d`;
 
+
 export const aboutPenguin: string = `
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp.::::.<br/>
 &nbsp&nbsp__...::O:::::<br/>

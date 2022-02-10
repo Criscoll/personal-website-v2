@@ -19,7 +19,7 @@ export default function AboutMe() {
 
     return (
         <>
-            <section className="about-page-container">
+            <section className="about-page-container" id="about">
                 <div className="inner-container">
                     <h1
                         className={` hide ${headerInView ? 'drop-in' : ''}`}

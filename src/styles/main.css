@@ -692,6 +692,7 @@ p {
 }
 
 .side-column-right-container .resume {
+  visibility: hidden;
   color: #62e17e;
   font-family: 'Mx437 IBM Model3x Alt4';
   font-size: 24px;
@@ -777,8 +778,8 @@ p {
 
 .side-column-right-container .contact-details .contact-icons *:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .navbar {
@@ -788,6 +789,17 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.navbar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  margin: 10px;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -814,11 +826,6 @@ p {
 .navbar :nth-child(3) {
   -webkit-animation-delay: 300ms;
           animation-delay: 300ms;
-}
-
-.navbar :nth-child(4) {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
 }
 
 .mobile-navbar-container {
@@ -910,8 +917,8 @@ p {
 .nav-btn::before {
   content: '';
   position: absolute;
-  width: 110%;
-  height: 110px;
+  width: 100%;
+  height: 30px;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   visibility: hidden;

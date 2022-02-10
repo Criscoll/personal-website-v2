@@ -1,5 +1,6 @@
 import ImageBtn from "../ImageBtn";
 import parse from 'html-react-parser';
+import { useInView } from 'react-intersection-observer';
 
 interface ProjectCardProps {
     imgBtnProps: {
@@ -13,9 +14,14 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ imgBtnProps, projectDescription, projectTechStack }: ProjectCardProps) => {
-
+    const { ref: projectCardRef, inView: projectCardInView } = useInView({
+        threshold: 0.3,
+        triggerOnce: true,
+    });
     return <>
-        <div className="project-card-container">
+        <div ref={projectCardRef}
+            className={` project-card-container hide ${projectCardInView ? 'drop-in' : ''}`}
+        >
             <ImageBtn
                 {...imgBtnProps}
             />

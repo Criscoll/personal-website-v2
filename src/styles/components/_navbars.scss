@@ -4,10 +4,12 @@
     display: flex;
     justify-content: space-between;
 
-    // margin: 100px 0 0 0;
-    // width: 60%;
-    // max-width: 900px;
-    // min-width: 820px;
+    a {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        margin: 10px;
+    }
 
     @media only screen and (max-width: $medium-screen) {
         flex-direction: column;
@@ -15,7 +17,7 @@
         width: 100%;
     }
 
-    @for $i from 1 through 4 {
+    @for $i from 1 through 3 {
         :nth-child(#{$i}) {
             animation-delay: #{100 * $i}ms;
         }

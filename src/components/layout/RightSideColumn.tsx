@@ -44,36 +44,42 @@ export default function RightSideColumn() {
                                 />
                             ) : null}
                             <div className="contact-icons">
-                                <img
-                                    src={emailIcon}
-                                    alt="email"
-                                    onMouseEnter={() => {
-                                        setHoveredContact('Email');
-                                    }}
-                                    onMouseLeave={() => {
-                                        setHoveredContact('');
-                                    }}
-                                />
-                                <img
-                                    src={linkedinIcon}
-                                    alt="linkedin"
-                                    onMouseEnter={() => {
-                                        setHoveredContact('LinkedIn');
-                                    }}
-                                    onMouseLeave={() => {
-                                        setHoveredContact('');
-                                    }}
-                                />
-                                <img
-                                    src={githubIcon}
-                                    alt="github"
-                                    onMouseEnter={() => {
-                                        setHoveredContact('Github');
-                                    }}
-                                    onMouseLeave={() => {
-                                        setHoveredContact('');
-                                    }}
-                                />
+                                <a href="malito: cristiand2021@gmail.com" target="_blank" rel=" noopener noreferrer">
+                                    <img
+                                        src={emailIcon}
+                                        alt="email"
+                                        onMouseEnter={() => {
+                                            setHoveredContact('Email');
+                                        }}
+                                        onMouseLeave={() => {
+                                            setHoveredContact('');
+                                        }}
+                                    />
+                                </a>
+                                <a href="https://www.linkedin.com/in/cristian" target="_blank" rel=" noopener noreferrer">
+                                    <img
+                                        src={linkedinIcon}
+                                        alt="linkedin"
+                                        onMouseEnter={() => {
+                                            setHoveredContact('LinkedIn');
+                                        }}
+                                        onMouseLeave={() => {
+                                            setHoveredContact('');
+                                        }}
+                                    />
+                                </a>
+                                <a href="https://github.com/Criscoll" target="_blank" rel=" noopener noreferrer">
+                                    <img
+                                        src={githubIcon}
+                                        alt="github"
+                                        onMouseEnter={() => {
+                                            setHoveredContact('Github');
+                                        }}
+                                        onMouseLeave={() => {
+                                            setHoveredContact('');
+                                        }}
+                                    />
+                                </a>
                             </div>
                         </div>
                     </>

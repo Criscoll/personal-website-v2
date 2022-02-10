@@ -17,7 +17,7 @@ const LandingPage = forwardRef<HTMLDivElement>((_, navbarRef) => {
 
     return (
         <>
-            <section className="landing-page-container">
+            <section className="landing-page-container" id="home">
                 <div className="typewriter-content">
                     <Typewriter
                         onInit={(typewriter) => {

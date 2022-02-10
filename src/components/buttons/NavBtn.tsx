@@ -5,11 +5,12 @@ import { useState, useEffect } from 'react';
 
 interface NavBtnProps {
     name: string;
+    link: string;
     textSize: 'small' | 'medium' | 'large';
     isStatic: boolean;
 }
 
-const NavBtn = ({ name, textSize, isStatic }: NavBtnProps) => {
+const NavBtn = ({ name, link, textSize, isStatic }: NavBtnProps) => {
 
     const [introComplete] = useRecoilState(introCompleteAtom);
     const [navbarInView] = useRecoilState(navbarInViewAtom);
@@ -22,7 +23,9 @@ const NavBtn = ({ name, textSize, isStatic }: NavBtnProps) => {
     }, [introComplete]);
 
     return <>
-        <button className={`nav-btn text-size-${textSize} ${!navbarInView || isStatic ? 'pop-up' : 'pop-up-hide'} ${isStatic || visible ? 'visible' : 'invisible'}`}>{name}</button>
+        <a href={link} className={`${!navbarInView || isStatic ? 'pop-up' : 'pop-up-hide'} ${isStatic || visible ? 'visible' : 'invisible'}`}>
+            <button className={`nav-btn text-size-${textSize} ${!navbarInView || isStatic ? 'pop-up' : 'pop-up-hide'}`}>{name}</button>
+        </a>
     </>
 
 }

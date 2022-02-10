@@ -1,4 +1,4 @@
-import { aboutIntro } from '../constants/text';
+import { aboutIntro, aboutPenguin } from '../constants/text';
 import parse from 'html-react-parser';
 import ProfilePhoto from '../assets/images/profile-photo.jpg';
 import { useInView } from 'react-intersection-observer';
@@ -34,6 +34,8 @@ export default function AboutMe() {
                             ref={textRef}
                         >
                             <p>{parse(aboutIntro)}</p>
+                            <p className='penguin'>{parse(aboutPenguin)}</p>
+
                         </div>
                         <div
                             className={`image-content hide ${imageInView ? 'drop-in' : ''

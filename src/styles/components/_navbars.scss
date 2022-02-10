@@ -64,6 +64,8 @@
     }
 
     .mobile-navbar {
+        display: flex;
+        align-items: center;
         position: fixed;
         right: 0;
 

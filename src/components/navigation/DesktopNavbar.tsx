@@ -21,7 +21,7 @@ const DesktopNavbar = forwardRef<HTMLDivElement, DesktopNavbarpProps>(({ introCo
                 {introComplete ? (
                     <>
                         {btnList.map((name, idx) => {
-                            return <NavBtn name={name} link={anchorList[idx]} textSize={textSize} isStatic={isStatic} />
+                            return <NavBtn key={name} name={name} link={anchorList[idx]} textSize={textSize} isStatic={isStatic} />
                         })}
                     </>
                 ) : null}

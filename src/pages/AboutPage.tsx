@@ -34,9 +34,9 @@ export default function AboutMe() {
                             ref={textRef}
                         >
                             <p>{parse(aboutIntro)}</p>
-                            <div className="skills-list">
+                            {/* <div className="skills-list">
                                 {parse(aboutSkills)}
-                            </div>
+                            </div> */}
                         </div>
                         <div
                             className={`image-content hide ${imageInView ? 'drop-in' : ''

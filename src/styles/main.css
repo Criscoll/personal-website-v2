@@ -874,11 +874,17 @@ p {
 }
 
 .mobile-navbar-container .mobile-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   right: 0;
   width: 40%;
   height: 100vh;
-  background-color: #0a1141;
+  background-color: #4f5056e6;
   z-index: 5;
 }
 
@@ -1029,7 +1035,7 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 150px 0;
+    margin: 0 0 100px 0;
   }
 }
 
@@ -1058,6 +1064,8 @@ p {
 }
 
 .project-card-container .project-tech-stack {
+  color: #fff;
+  font-family: 'Mx437 IBM Model3x Alt4', monospace;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

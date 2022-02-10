@@ -1,4 +1,5 @@
 @import '../utils/variables.scss';
+@import '../utils/colours.scss';
 
 .project-card-container {
     display: flex;
@@ -18,7 +19,7 @@
 
     @media only screen and (max-width: $medium-screen) {
         flex-direction: column;
-        margin: 150px 0;
+        margin: 0 0 100px 0;
     }
 
     img {
@@ -38,6 +39,8 @@
     }
 
     .project-tech-stack {
+        color: $tertiary-colour-white;
+        font-family: 'Mx437 IBM Model3x Alt4', monospace;
         display: flex;
         justify-content: center;
         align-items: center;

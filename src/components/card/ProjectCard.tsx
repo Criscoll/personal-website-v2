@@ -26,7 +26,7 @@ const ProjectCard = ({ imgBtnProps, projectDescription, projectTechStack }: Proj
                 {...imgBtnProps}
             />
             <div className="project-description"><p>{projectDescription}</p></div>
-            <div className="project-tech-stack"><p>{parse(projectTechStack)}</p></div>
+            <div className="project-tech-stack">{parse(projectTechStack)}</div>
 
         </div>
     </>

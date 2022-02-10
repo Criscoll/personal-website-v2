@@ -24,6 +24,25 @@ export const aboutPenguin: string = `
 
 `
 
+export const aboutPenguin: string = `
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp.::::.<br/>
+&nbsp&nbsp__...::O:::::<br/>
+,''''::::::'  ::<br/>
+&nbsp&nbsp&nbsp&nbsp\`':'':..:::<br/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp::::::::<br/>
+&nbsp&nbsp&nbsp&nbsp:   :::::::::<br/>
+&nbsp&nbsp&nbsp:  :::::::::::<br/>
+&nbsp&nbsp:  ::::::::::::<br/>
+&nbsp&nbsp: :::: :::::::<br/>
+&nbsp&nbsp: ::: .:::::::<br/>
+&nbsp&nbsp&nbsp: ::: ::::::<br/>
+&nbsp&nbsp&nbsp&nbsp:  :: ::::<br/>
+,;;::'.:::::::<br/>
+
+
+
+`
+
 
 export const aboutSkills: string = `What I have experience with: <br /> 
 <ul>

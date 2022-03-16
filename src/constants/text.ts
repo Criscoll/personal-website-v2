@@ -3,7 +3,7 @@ import sortingVisualiserCover from "../assets/images/sorting-visualiser-cover.pn
 import photoproCover from "../assets/images/photopro-cover.png";
 
 
-export const aboutIntro: string = `Hey! my name is <span class="text-green">Cristian</span>, welcome to my website. I built this website mainly for fun and experience but also as a way to host my projects to help keep them all in one place. Still a work in progress :d`;
+export const aboutIntro: string = `Hey! my name is <span class="text-green">Cristian</span>, welcome to my website. This is a small side project of mine where I'll be hosting links to some of my more interesting projects as well as ways to get in contact. Still under construction so heres a penguin:`;
 
 
 export const aboutPenguin: string = `
@@ -76,7 +76,7 @@ export const photoproProject = {
         projectTitle: "Photopro",
         href: "https://github.com/Criscoll/PhotoPro"
     },
-    projectDescription: "A stock image hosting website that learns user behaviour for a more personalised experience. Users can upload a photo of their choosing which will appear on the web app with a watermarked added across the image. Other users may view this stock photo, like, comment and even follow other users if they enjoy their type of content.",
+    projectDescription: "A stock image hosting website that learns user behaviour for a more personalised experience. Users can upload a photo of their choosing which will appear on the web app with a watermark applied across the image. Other users may view this stock photo, like, comment and even follow other users if they enjoy their type of content.",
     projectTechStack: `
     <ul>
         <li>Python</li> 
